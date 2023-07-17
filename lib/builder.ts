@@ -181,7 +181,7 @@ class Builder extends EventEmitter {
       this.buildId = 0;
     } catch (e) {
       this.cleanup();
-      th row e;
+      throw e;
     }
   }
 

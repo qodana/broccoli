@@ -4,7 +4,6 @@ import path from 'path';
 import mime from 'mime-types';
 import handlebars from 'handlebars';
 import Watcher from './watcher';
-import BuildError from './errors/build';
 import resolvePath from 'resolve-path';
 // @ts-ignore
 import ansiHTML from 'ansi-html';

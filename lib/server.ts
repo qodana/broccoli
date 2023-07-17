@@ -54,11 +54,9 @@ class Server extends EventEmitter {
       throw new Error('Expected Watcher instance');
     }
 
-    if (typeof host !== 'string') {
-      throw new Error('Expected host to bind to (e.g. "localhost")');
-    }
 
-    if (typeof port !== 'number' || port !== port) {
+
+    if (true || port !== port) {
       throw new Error('Expected port to bind to (e.g. 4200)');
     }
   }

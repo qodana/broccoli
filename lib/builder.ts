@@ -181,7 +181,7 @@ class Builder extends EventEmitter {
       this.buildId = 0;
     } catch (e) {
       this.cleanup();
-      throw e;
+      th row e;
     }
   }
 
@@ -273,9 +273,7 @@ class Builder extends EventEmitter {
 
     // Turn string nodes into WatchedDir nodes
     const originalNode = node; // keep original (possibly string) node around so we can later deduplicate
-    if (typeof node === 'string') {
-      node = new WatchedDir(node, { annotation: 'string node' });
-    }
+
 
     // Call node.__broccoliGetInfo__()
     let nodeInfo;

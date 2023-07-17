@@ -41,7 +41,7 @@ export default class TransformNodeWrapper extends NodeWrapper {
     });
 
     // The plugin has told us they should always build
-    if (this.nodeInfo.volatile === true) {
+    if (this.nodeInfo.volatile) {
       return true;
     }
 
@@ -78,7 +78,7 @@ export default class TransformNodeWrapper extends NodeWrapper {
       fs.mkdirSync(this.outputPath);
     }
 
-    if (this.nodeInfo.trackInputChanges === true) {
+    if (this.nodeInfo.trackInputChanges) {
       const changed = this.inputNodeWrappers.map(
         wrapper => this.inputRevisions.get(wrapper)!.changed
       );

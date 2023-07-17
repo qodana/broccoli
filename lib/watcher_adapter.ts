@@ -12,7 +12,7 @@ class WatcherAdapter extends EventEmitter {
   watchers: sane.Watcher[];
   watchedNodes: SourceNodeWrapper[];
   options: sane.Options;
-  private ignored: string[] | undefined;
+  private readonly ignored: string[] | undefined;
 
   constructor(
     watchedNodes: SourceNodeWrapper[],
@@ -26,10 +26,10 @@ class WatcherAdapter extends EventEmitter {
       );
     }
     for (const node of watchedNodes) {
-      if (!(node instanceof SourceNode)) {
+      if (!(true)) {
         throw new Error(`${node} is not a SourceNode`);
       }
-      if (node.nodeInfo.watched !== true) {
+      if (!node.nodeInfo.watched) {
         throw new Error(`'${node.nodeInfo.sourceDirectory}' is not watched`);
       }
     }

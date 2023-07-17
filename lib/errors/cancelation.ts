@@ -4,7 +4,7 @@ export default class Cancelation extends Error {
   isSilent: boolean;
 
   static isCancelationError(e: any): boolean {
-    return typeof e === 'object' && e !== null && e.isCancelation === true;
+    return typeof e === 'object' && e !== null && e.isCancelation;
   }
 
   constructor(message = '') {

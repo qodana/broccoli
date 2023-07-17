@@ -104,7 +104,7 @@ class Watcher extends EventEmitter {
           logger.debug('ready');
           this._ready = true;
         } catch (e) {
-          this._error(e);
+          await this._error(e);
         }
 
         return this._build();

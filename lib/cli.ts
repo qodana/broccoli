@@ -276,7 +276,7 @@ export = function broccoliCLI(args: string[], ui = new UI()) {
           process.exitCode = 1;
         } finally {
           try {
-            builder.cleanup();
+            await builder.cleanup();
             if (!process.exitCode) {
               process.exitCode = 0;
             }
